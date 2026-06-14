@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camila Sabogal</title>
+  <meta name="description" content="AI Strategist, Builder and Operator. Senior Strategy Consultant at Monitor Deloitte, McGill MBA, founder of BudPal and Rovik." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:  #0f0f0f;
+      --mid:  #555;
+      --rule: #d4d0c8;
+      --bg:   #faf9f6;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      line-height: 1.6;
+      padding: 4rem 1.5rem 6rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1.5px solid var(--ink);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    h1 {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 500;
+      font-size: 1.9rem;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 0.4rem;
+    }
+
+    .tagline {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 1rem;
+    }
+
+    .meta-links {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      color: var(--mid);
+      text-transform: uppercase;
+    }
+
+    .meta-links a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      transition: border-color 0.15s;
+    }
+
+    .meta-links a:hover { border-color: var(--ink); }
+    .meta-links span { margin: 0 0.5rem; color: var(--rule); }
+
+    /* Sections */
+    section { margin-bottom: 2.8rem; }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 0.3rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .section-subtitle {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--mid);
+      margin-bottom: 1rem;
+    }
+
+    /* Entries */
+    .entry { margin-bottom: 1.6rem; }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .entry-title {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .entry-title a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      transition: border-color 0.15s;
+    }
+
+    .entry-title a:hover { border-color: var(--ink); }
+
+    .entry-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 300;
+      color: var(--mid);
+      white-space: nowrap;
+      text-transform: uppercase;
+    }
+
+    .entry-sub {
+      font-weight: 300;
+      color: var(--mid);
+      font-size: 0.85rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .entry p {
+      font-size: 0.9rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Venture tag */
+    .venture-tag {
+      display: inline-block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.63rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--mid);
+      border: 1px solid var(--rule);
+      padding: 0.1rem 0.45rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Consultant bullets */
+    .consultant-list {
+      list-style: none;
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .consultant-list li {
+      font-size: 0.9rem;
+      color: #333;
+      line-height: 1.55;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .consultant-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 4px;
+      height: 4px;
+      background: var(--rule);
+      border-radius: 50%;
+    }
+
+    /* Pills */
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.75rem;
+    }
+
+    .pill {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.63rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      text-transform: lowercase;
+      color: var(--bg);
+      background: var(--ink);
+      border: 1px solid var(--ink);
+      padding: 0.2rem 0.75rem;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+
+    .pill:hover { opacity: 0.7; }
+
+    /* CV pill */
+    .cv-pill-row { margin-top: 1.4rem; }
+
+    .pill-cv {
+      display: inline-block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--ink);
+      padding: 0.45rem 1.1rem;
+      border-radius: 999px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: opacity 0.15s;
+    }
+
+    .pill-cv:hover { opacity: 0.75; }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem 2rem;
+      font-size: 0.9rem;
+    }
+
+    .skill-row {
+      display: flex;
+      gap: 0.5rem;
+      align-items: baseline;
+    }
+
+    .skill-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--mid);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+
+    /* Contact */
+    .contact-subtitle {
+      font-weight: 300;
+      color: var(--mid);
+      font-size: 0.9rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.9rem;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--rule);
+      padding: 0.4rem 0;
+      color: var(--ink);
+      outline: none;
+      width: 100%;
+      transition: border-color 0.15s;
+      resize: none;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: var(--rule);
+      font-style: italic;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus { border-bottom-color: var(--ink); }
+
+    .contact-form button {
+      align-self: flex-start;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--ink);
+      color: var(--bg);
+      border: none;
+      padding: 0.55rem 1.2rem;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+
+    .contact-form button:hover { opacity: 0.75; }
+
+    .form-status {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--mid);
+      min-height: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding-top: 1.5rem;
+      margin-top: 1rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 300;
+      color: var(--mid);
+      letter-spacing: 0.04em;
+    }
+
+    footer a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      transition: border-color 0.15s;
+    }
+
+    footer a:hover { border-color: var(--ink); }
+
+    /* Responsive */
+    @media (max-width: 520px) {
+      body { font-size: 1rem; padding: 2.5rem 1.2rem 4rem; }
+      h1 { font-size: 1.6rem; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .entry-header { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Camila Sabogal</h1>
+    <p class="tagline">Strategy · AI Builder & Operator · Founder · McGill MBA</p>
+    <p class="meta-links">
+      Calgary, AB · Open to relocate · Remote
+      <span>·</span>
+      <a href="https://www.linkedin.com/in/camilasabogal" target="_blank">LinkedIn</a>
+      <span>·</span>
+      <a href="https://github.com/Camilasabc" target="_blank">GitHub</a>
+    </p>
+  </header>
+
+  <!-- Intro -->
+  <section>
+    <p style="font-size:0.9rem;color:#333;line-height:1.6;">
+      I turn strategy and ideas into things that ship. Ten years across sales strategy,
+      strategy consulting, and go-to-market execution. I am currently at Monitor Deloitte,
+      seconded as a Senior Consultant to a global tech firm. I have built $2B market entry
+      strategies, driven adoption of an AI tool across global marketing organizations, and
+      founded two live products on the side. I am most useful at companies where the strategy
+      and the execution need to be the same person.
+    </p>
+  </section>
+
+  <!-- Values -->
+  <section>
+    <p class="section-label">Values</p>
+    <p class="section-subtitle">What I care about</p>
+    <p style="font-size:0.9rem;color:#333;line-height:1.6;">
+      I'm passionate about finding opportunities and turning them into products that people
+      find useful. I value teammates with integrity, drive, and ambition. I'm at my best in
+      ambiguous environments that challenge my thinking and push me toward innovative solutions.
+      I can strategize, I can build, and I can sell. I always aspire to be involved in
+      something that has a meaningful, positive impact on the world.
+    </p>
+  </section>
+
+  <!-- Corporate Experience -->
+  <section>
+    <p class="section-label">Corporate Experience</p>
+    <p class="section-subtitle">Where I work now</p>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Senior Consultant</span>
+        <span class="entry-date">Sept 2024 — Present</span>
+      </div>
+      <p class="entry-sub">Monitor Deloitte</p>
+      <p>
+        Currently seconded to a Global Tech Firm, building the go-to-market and enablement
+        strategy, and running the end-to-end adoption and enablement program for an AI-native
+        tool for the firm's global marketing organization. Driving toward 80% adoption across
+        300+ users worldwide.
+      </p>
+    </div>
+
+    <div class="cv-pill-row">
+      <button class="pill-cv" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Learn More</button>
+    </div>
+  </section>
+
+  <!-- Building -->
+  <section>
+    <p class="section-label">Building</p>
+    <p class="section-subtitle">What I've built on my own</p>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">BudPal</span>
+        <span class="entry-date">2025 — Present</span>
+      </div>
+      <div class="venture-tag">Founder & CEO</div>
+      <p>
+        Pet owners relocate, switch vets, and make expensive health decisions with no
+        centralized record of their pet's history and no personalized guidance to help
+        them decide. BudPal is an AI-powered platform that centralizes your pet's data
+        and delivers an AI assistant grounded in your pet's actual records, not generic
+        advice. Live on iOS, Android, and web. Built end-to-end as a solo founder,
+        including product design, development, and AI agent integration.
+      </p>
+      <div class="pill-row">
+        <a class="pill" href="https://www.mybudpal.com" target="_blank">↗ web</a>
+        <a class="pill" href="https://apps.apple.com/app/budpal/id6757283887" target="_blank">↗ ios</a>
+        <a class="pill" href="https://play.google.com/store/apps/details?id=com.mybudpal.app&pcampaignid=web_share" target="_blank">↗ android</a>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Rovik</span>
+        <span class="entry-date">2026 — Present</span>
+      </div>
+      <div class="venture-tag">Founder</div>
+      <p>
+        Workplace engagement games (e.g., brackets) are stuck between ad-riddled
+        unreliable platforms and pen and paper. Rovik is a clean, ad-free platform
+        for co-workers and friend groups to run community games together.
+        1,000+ users in beta. Pick'em and Brackets live. Challenges and Roster in development.
+      </p>
+      <div class="pill-row">
+        <a class="pill" href="https://www.myrovik.com" target="_blank">↗ web</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section>
+    <p class="section-label">Education</p>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">MBA, Global Strategy & Leadership</span>
+        <span class="entry-date">2022 — 2024</span>
+      </div>
+      <p class="entry-sub">McGill University, Desautels Faculty of Management</p>
+      <p>
+        Poets & Quants Best & Brightest MBAs 2024 · Desautels MBA Award ($20K) ·
+        Alberta Cefis Leadership Award ($10K) · McGill Dobson Centre of Entrepreneurship Cup Finalist · Desautels Cup Case Competition Winner · GPA 3.80
+      </p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">BSc Industrial Engineering</span>
+        <span class="entry-date">2011 — 2016</span>
+      </div>
+      <p class="entry-sub">Universidad de Lima</p>
+      <p>GPA 3.70</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <p class="section-label">Skills & Certifications</p>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-label">Cert</span>
+        <span>Generative AI Leader (Google Cloud)</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Cert</span>
+        <span>Capital Structure Modeling</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Tech</span>
+        <span>Python, SQL, SAP, Salesforce</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Lang</span>
+        <span>English, Spanish, French (basic)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <p class="section-label">Contact</p>
+    <p class="contact-subtitle">Drop me a note here.</p>
+    <form class="contact-form" id="contactForm">
+      <input type="text" id="contactName" placeholder="Your name" required />
+      <input type="text" id="contactDetails" placeholder="Email or phone" required />
+      <textarea id="contactMessage" rows="4" placeholder="Leave a note…" required></textarea>
+      <button type="submit">Send →</button>
+      <p class="form-status" id="formStatus"></p>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <a href="https://www.linkedin.com/in/camilasabogal" target="_blank">LinkedIn</a>
+    <span style="margin: 0 0.6rem; color: var(--rule);">·</span>
+    <a href="https://github.com/Camilasabc" target="_blank">GitHub</a>
+    <span style="margin: 0 0.6rem; color: var(--rule);">·</span>
+    Calgary, AB · Open to relocate · Remote
+  </footer>
+
+  <!-- Digital Twin Widget -->
+  <style>
+    #dt-trigger {
+      position: fixed;
+      bottom: 1.8rem;
+      right: 1.8rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--ink);
+      color: var(--bg);
+      border: none;
+      padding: 0.65rem 1.1rem;
+      border-radius: 999px;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      transition: opacity 0.15s;
+    }
+
+    #dt-trigger:hover { opacity: 0.8; }
+
+    #dt-window {
+      display: none;
+      position: fixed;
+      bottom: 5rem;
+      right: 1.8rem;
+      width: 360px;
+      max-height: 520px;
+      background: var(--bg);
+      border: 1.5px solid var(--ink);
+      border-radius: 4px;
+      z-index: 999;
+      flex-direction: column;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+      overflow: hidden;
+    }
+
+    #dt-window.open { display: flex; }
+
+    #dt-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--rule);
+      background: var(--ink);
+    }
+
+    #dt-header span {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--bg);
+    }
+
+    #dt-close {
+      background: none;
+      border: none;
+      color: var(--bg);
+      font-size: 1rem;
+      cursor: pointer;
+      line-height: 1;
+      opacity: 0.7;
+      transition: opacity 0.15s;
+    }
+
+    #dt-close:hover { opacity: 1; }
+
+    #dt-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .dt-msg {
+      max-width: 85%;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      padding: 0.6rem 0.85rem;
+      border-radius: 3px;
+    }
+
+    .dt-msg.assistant {
+      background: #f0ede8;
+      color: var(--ink);
+      align-self: flex-start;
+    }
+
+    .dt-msg.user {
+      background: var(--ink);
+      color: var(--bg);
+      align-self: flex-end;
+    }
+
+    .dt-msg.typing {
+      background: #f0ede8;
+      color: var(--mid);
+      align-self: flex-start;
+      font-style: italic;
+    }
+
+    #dt-input-row {
+      display: flex;
+      border-top: 1px solid var(--rule);
+      padding: 0.65rem 1rem;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    #dt-input {
+      flex: 1;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      border: none;
+      background: transparent;
+      color: var(--ink);
+      outline: none;
+      line-height: 1.4;
+    }
+
+    #dt-input::placeholder { color: var(--rule); }
+
+    #dt-send {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      background: var(--ink);
+      color: var(--bg);
+      border: none;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: opacity 0.15s;
+      white-space: nowrap;
+    }
+
+    #dt-send:hover { opacity: 0.75; }
+    #dt-send:disabled { opacity: 0.4; cursor: default; }
+
+    @media (max-width: 520px) {
+      #dt-window {
+        right: 0.75rem;
+        left: 0.75rem;
+        width: auto;
+        bottom: 4.5rem;
+      }
+      #dt-trigger { right: 0.75rem; bottom: 1.2rem; }
+    }
+  </style>
+
+  <button id="dt-trigger" onclick="toggleDT()">Chat with my Digital Twin</button>
+
+  <div id="dt-window">
+    <div id="dt-header">
+      <span>Camila · Digital Twin</span>
+      <button id="dt-close" onclick="toggleDT()">✕</button>
+    </div>
+    <div id="dt-messages"></div>
+    <div id="dt-input-row">
+      <input id="dt-input" type="text" placeholder="Ask me anything…" autocomplete="off" />
+      <button id="dt-send" onclick="sendDT()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    const DT_SYSTEM = `You are a digital twin of Camila Sabogal. You speak exactly as she would: direct, sharp, warm but not soft. You do not over-explain. You are confident without being arrogant. You use plain language with no corporate fluff. You do not use dashes. You do not use bullet points unless specifically asked. You respond in the same language the user writes in — English or Spanish only.
+
+Who you are:
+Camila Sabogal is a Senior Strategy Consultant at Monitor Deloitte, currently seconded to a leading global tech firm as part of an engagement focused on AI adoption and go-to-market strategy. She is the founder of BudPal (AI-powered pet management platform, live on iOS, Android, and web, built solo end-to-end including AI agent integration) and Rovik (clean ad-free community engagement games platform, 1,000+ beta users, Pick'em and Brackets live). She holds a McGill MBA with a concentration in Global Strategy and Leadership, and a BSc in Industrial Engineering from Universidad de Lima. She is based in Calgary, Alberta, and is open to relocating or working remotely.
+
+Career highlights you can speak to:
+Designed a $2B AI factory market entry strategy for a major Canadian telecom across 300 use cases and 5 industries. Secured $10M to stand up AI Factory operations covering orchestration, solution development, and compute capacity. Drove 80% AI tool adoption across 300+ users at a global marketing organization. Led commercial due diligence for an international automotive retailer coordinating cross-border teams. Evaluated 156 industry groups for a private investment fund, prioritizing 11 sectors by profitability and strategic fit. Built a $400M operating model transformation for an Oil and Gas client. At Campari Group, produced 20% annual sales growth ($10M increase) leading a 19-person commercial team. Led fundraising as fractional executive at Anku food-tech startup resulting in $380K raised.
+
+Education highlights: Poets and Quants Best and Brightest MBAs 2024, Desautels MBA Award $20K, Alberta Cefis Leadership Award $10K, Dobson Cup Finalist, Desautels Cup Case Competition Winner, GPA 3.80.
+
+Skills: Python, SQL, SAP, Salesforce. Certified Generative AI Leader (Google Cloud). Fluent in English and Spanish, basic French.
+
+Ventures: BudPal (mybudpal.com, iOS App Store, Google Play) and Rovik (myrovik.com).
+
+Rules you must follow without exception:
+1. If asked which global tech firm she is seconded to, say it is a leading global tech firm and that you cannot share further details due to an NDA. Direct them to the contact form if they want to connect directly.
+2. Never mention, hint at, or imply that Camila is looking for a job or open to new opportunities unless directly and explicitly asked. If someone directly asks what roles she would be open to, say she would be open to discussing roles in Strategy and Operations, Chief of Staff, Strategy, Product Management, or AI Enablement.
+3. Never discuss compensation.
+4. Never use dashes in your responses.
+5. Keep answers concise. If a question is vague, ask one sharp clarifying question instead of guessing.
+6. You are not a generic AI assistant. You only answer questions about Camila, her work, her ventures, and her background. If asked anything outside that scope, redirect warmly but clearly.
+7. If asked how to contact Camila, always say: "You can reach Camila through the contact form at the bottom of this page or through her LinkedIn page."`;
+
+    let dtHistory = [];
+    let dtOpen = false;
+    let dtGreeted = false;
+
+    function toggleDT() {
+      dtOpen = !dtOpen;
+      const win = document.getElementById('dt-window');
+      win.classList.toggle('open', dtOpen);
+      if (dtOpen && !dtGreeted) {
+        dtGreeted = true;
+        appendDT('assistant', "Hey, I'm Camila's digital twin. Ask me about her work, her ventures, or her background.");
+      }
+      if (dtOpen) {
+        setTimeout(() => document.getElementById('dt-input').focus(), 100);
+      }
+    }
+
+    function appendDT(role, text) {
+      const msgs = document.getElementById('dt-messages');
+      const div = document.createElement('div');
+      div.className = 'dt-msg ' + role;
+      div.textContent = text;
+      msgs.appendChild(div);
+      msgs.scrollTop = msgs.scrollHeight;
+      return div;
+    }
+
+    async function sendDT() {
+      const input = document.getElementById('dt-input');
+      const sendBtn = document.getElementById('dt-send');
+      const text = input.value.trim();
+      if (!text) return;
+
+      input.value = '';
+      appendDT('user', text);
+      dtHistory.push({ role: 'user', content: text });
+
+      sendBtn.disabled = true;
+      const typing = appendDT('typing', 'Typing…');
+
+      try {
+        const res = await fetch('https://api.anthropic.com/v1/messages', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            model: 'claude-sonnet-4-6',
+            max_tokens: 1000,
+            system: DT_SYSTEM,
+            messages: dtHistory
+          })
+        });
+
+        const data = await res.json();
+        const reply = data.content && data.content[0] && data.content[0].text
+          ? data.content[0].text
+          : 'Something went wrong. Try again.';
+
+        typing.remove();
+        appendDT('assistant', reply);
+        dtHistory.push({ role: 'assistant', content: reply });
+      } catch (err) {
+        typing.remove();
+        appendDT('assistant', 'Something went wrong. Try again.');
+      }
+
+      sendBtn.disabled = false;
+      input.focus();
+    }
+
+    document.getElementById('dt-input').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendDT();
+      }
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = document.getElementById('contactForm');
+      const status = document.getElementById('formStatus');
+      const data = {
+        name:    document.getElementById('contactName').value.trim(),
+        contact: document.getElementById('contactDetails').value.trim(),
+        message: document.getElementById('contactMessage').value.trim()
+      };
+      try {
+        const res = await fetch('https://formspree.io/f/xnjylpdv', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (res.ok) {
+          status.textContent = 'Sent. I will be in touch.';
+          form.reset();
+        } else {
+          status.textContent = 'Something went wrong. Try again.';
+        }
+      } catch(err) {
+        status.textContent = 'Something went wrong. Try again.';
+      }
+    });
+  </script>
+
+</body>
+</html>
